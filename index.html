@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>HTML Meta Tag</title>
-      <meta http-equiv = "refresh" content = "0; url = https://play.tailwindcss.com/eYQJezjmXQ?size=634x951" />
+      <title>Redirect to tailwind</title>
    </head>
    <body>
-      <p>Redirecting to another URL</p>
+      <p>Redirecting to the newest version of design on<span style="color: #16BDCA;">tailwind</span></p>
    </body>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  <script>	
+var HTML_FILE_URL = 'https://gist.githubusercontent.com/tesar-tech/a194fcca161e661eea2437527beb86d8/raw/tailwind';
+
+	$(document).ready(function() {
+		$.get(HTML_FILE_URL, function(data) {
+			var lines = data.split("\n");
+			// alert(lines[0]);
+			$(location).attr("href", lines[0]);
+		});
+	});
+	</script>
 </html>
